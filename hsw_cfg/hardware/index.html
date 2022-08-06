@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Gavin Gao">
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Hardware - Flight DIY</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Hardware";
+    var mkdocs_page_input_path = "hsw_cfg/hardware.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Flight DIY</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Hardware & Software Config</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Hardware</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">硬件说明</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_2">机架</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">电源</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">动力</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">飞控</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_6">传感器</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_7">通信</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_8">遥控器 和 接收机</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_9">数传电台</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_10">硬件组装</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_11">深蓝学院课程</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../software/">Software</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../config_debug/">Config & Debug</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Simulation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../simulation/ros_gazebo/">ROS with Gazebo Simulation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Development</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../development/dev_px4/">Development PX4</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Credential</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../credential/pilot_license/">Pilot License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Flight DIY</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Hardware & Software Config &raquo;</li>
+        
+      
+    
+    <li>Hardware</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h1>
+<hr />
+<p align="center">
+  <img src="../img/DIY-PX4.png" style="width:90%">
+</p>
+
+<h2 id="_1">硬件说明<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">机架<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>F450</p>
+</li>
+<li>
+<p>机臂 和 脚架</p>
+</li>
+</ul>
+<h3 id="_3">电源<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>电池: 动力锂电池</p>
+</li>
+<li>
+<p>BB响</p>
+</li>
+<li>
+<p>底板 和 分电板</p>
+</li>
+</ul>
+<h3 id="_4">动力<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>郎宇 A2212 电机</p>
+</li>
+<li>
+<p>电调</p>
+</li>
+<li>
+<p>桨叶</p>
+</li>
+</ul>
+<h3 id="_5">飞控<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Pixhawk 4</p>
+</li>
+<li>
+<p>减震板</p>
+</li>
+</ul>
+<h3 id="_6">传感器<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>GPS</p>
+<ul>
+<li>安全开关</li>
+</ul>
+</li>
+<li>
+<p>IMU</p>
+</li>
+</ul>
+<h3 id="_7">通信<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h4 id="_8">遥控器 和 接收机<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>乐迪 AT9S 遥控器</p>
+</li>
+<li>
+<p>接收机: R9DS</p>
+</li>
+</ul>
+<h4 id="_9">数传电台<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<ul>
+<li>XROCK 无线数传电台模块</li>
+<li>V4具有可互换功能，可作为地面端，又可作为机载端使用</li>
+<li>APM / Pixhawk4 / PIX2.4.8</li>
+</ul>
+<p align="center">
+  <img src="../img/digital_radio_led.png" style="width:80%">
+</p>
+
+<p align="center">
+  <img src="../img/digital_radio_params.png" style="width:43%">
+  <img src="../img/digital_radio_app.png" style="width:50%">
+</p>
+
+<h2 id="_10">硬件组装<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p align="center">
+  <img src="../img/hw/IMG_1315-min.png" style="width:80%">
+</p>
+
+<p>焊接 底板和电调</p>
+<p align="center">
+  <img src="../img/hw/IMG_1316-min.png" style="width:80%">
+</p>
+<p align="center">
+  <img src="../img/hw/IMG_1317-min.png" style="width:80%">
+</p>
+<p align="center">
+  <img src="../img/hw/IMG_1318-min.png" style="width:80%">
+</p>
+
+<p>安装4个电机</p>
+<p align="center">
+  <img src="../img/hw/IMG_1319-min.png" style="width:80%">
+</p>
+
+<p>电机与电调接线 (注意顺序)，安装 机臂</p>
+<p align="center">
+  <img src="../img/hw/IMG_1320-min.png" style="width:80%">
+</p>
+
+<p>焊接 分电板和底板，并安装 (此步骤应该在安装机臂前)</p>
+<p align="center">
+  <img src="../img/hw/IMG_1321-min.png" style="width:80%">
+</p>
+
+<p>安装 减震板、飞控、GPS、脚架</p>
+<p align="center">
+  <img src="../img/hw/IMG_1322-min.png" style="width:80%">
+</p>
+
+<p align="center">
+  <img src="../img/hw/IMG_1323-min.png" style="width:80%">
+</p>
+
+<h2 id="_11">深蓝学院课程<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.shenlanxueyuan.com/my/course/470">从0制作自主空中机器人</a></li>
+</ul>
+<p align="center">
+  <img src="../img/DIY-MAV-Shenlan01.png" style="width:90%">
+</p>
+
+<p align="center">
+  <img src="../img/DIY-MAV-Shenlan02.png" style="width:90%">
+</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../software/" class="btn btn-neutral float-right" title="Software">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../software/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
