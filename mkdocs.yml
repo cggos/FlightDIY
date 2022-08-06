@@ -1,0 +1,60 @@
+site_name: Flight DIY
+
+site_description:
+
+site_author: Gavin Gao
+
+site_url:
+
+theme: 
+  name: readthedocs # readthedocs material
+  nav_style: light
+  # language: 'zh'
+  # palette:
+  #   primary: 'light blue'
+  #   accent: 'indigo' 
+  feature:
+    tabs: true
+
+markdown_extensions:
+  - toc:
+      permalink: true # "#"
+      # baselevel: 5
+      separator: "_"
+  - admonition
+  - footnotes
+  - meta
+  - def_list
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.arithmatex
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tilde        
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
+        
+nav:
+  - Home: 'index.md'
+  - Hardware: '00-hardware.md'
+  - Software: '01-software.md'
+  - Config & Debug: '02-config-debug.md'
+  - Simulation: '03-simulation.md'
+  - Development PX4: '04-dev-px4.md'
+  - Pilot License: '05-pilot-license.md'
