@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Gavin Gao">
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Software - Flight DIY</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Software";
+    var mkdocs_page_input_path = "01-software.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Flight DIY</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../00-hardware/">Hardware</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Software</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#fcu">飞控 (FCU) 固件</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gcs">地面站 (GCS)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#apm_missionplanner_mp">APM: MissionPlanner (MP)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#mp_on_linux">MP on Linux</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#px4_qgroundcontrol_qgc">PX4: QGroundControl (QGC)</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../02-config-debug/">Config & Debug</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../03-simulation/">Simulation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../04-dev-px4/">Development PX4</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../05-pilot-license/">Pilot License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Flight DIY</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Software</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="fcu">飞控 (FCU) 固件<a class="headerlink" href="#fcu" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>PX4 固件</p>
+<ul>
+<li>专为 <strong>Pixhawk</strong> 开发的固件。相对封闭，代码体系相对简单清晰，社区相对小，迭代慢一些，但因为相对清晰，适合学习研究。</li>
+</ul>
+</li>
+<li>
+<p>APM 固件</p>
+<ul>
+<li><code>arducopter4.0.7-px4.apj</code></li>
+<li>专为 <strong>Arduupilot</strong> 开发的固件，现也用于PIXHAWK。有ArduCopter社区支撑、开放，功能全、迭代升级快，适合直接用。由于有较多的历史兼容性需求，软件代码体系相对杂乱，还封装了PX4的内核，学习起来困难些。</li>
+</ul>
+</li>
+</ul>
+<p>APM和PX4是两款不同开源飞控固件，均可以跑在Pixhawk这款硬件板上。</p>
+<h2 id="gcs">地面站 (GCS)<a class="headerlink" href="#gcs" title="Permanent link">&para;</a></h2>
+<h3 id="apm_missionplanner_mp">APM: MissionPlanner (MP)<a class="headerlink" href="#apm_missionplanner_mp" title="Permanent link">&para;</a></h3>
+<h4 id="mp_on_linux">MP on Linux<a class="headerlink" href="#mp_on_linux" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Mission Planner下载链接：<a href="https://firmware.ardupilot.org/Tools/MissionPlanner/archive/">https://firmware.ardupilot.org/Tools/MissionPlanner/archive/</a></p>
+<ul>
+<li>注意：最新版本连接飞控有些奇怪问题，<strong>1.3.74</strong> 版本测试是ok的，后面的都不太好用</li>
+</ul>
+</li>
+<li>
+<p><a href="https://ardupilot.org/planner/docs/mission-planner-installation.html#mission-planner-on-linux">https://ardupilot.org/planner/docs/mission-planner-installation.html#mission-planner-on-linux</a></p>
+<ul>
+<li><strong>QGC</strong> and <strong>MAVProxy</strong> are alternatives that run stably in Linux</li>
+</ul>
+</li>
+<li>
+<p>run using <strong>MONO</strong>
+  <div class="highlight"><pre><span></span><code>mono MissionPlanner.exe
+</code></pre></div></p>
+</li>
+</ul>
+<h3 id="px4_qgroundcontrol_qgc">PX4: QGroundControl (QGC)<a class="headerlink" href="#px4_qgroundcontrol_qgc" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a href="http://qgroundcontrol.com/">http://qgroundcontrol.com/</a></p>
+</li>
+<li>
+<p>Ubuntu 18.04</p>
+<ul>
+<li><a href="https://github.com/mavlink/qgroundcontrol/releases/download/v4.0.11/QGroundControl.AppImage">https://github.com/mavlink/qgroundcontrol/releases/download/v4.0.11/QGroundControl.AppImage</a></li>
+</ul>
+<div class="highlight"><pre><span></span><code>./QGroundControl.AppImage
+</code></pre></div>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../02-config-debug/" class="btn btn-neutral float-right" title="Config & Debug">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../00-hardware/" class="btn btn-neutral" title="Hardware"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../00-hardware/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../02-config-debug/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

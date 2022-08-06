@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Gavin Gao">
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Simulation - Flight DIY</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Simulation";
+    var mkdocs_page_input_path = "03-simulation.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Flight DIY</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../00-hardware/">Hardware</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../01-software/">Software</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../02-config-debug/">Config & Debug</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Simulation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#installing_ros_and_gazebo">Installing ROS and Gazebo</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gazebo">Gazebo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mavros">MAVROS</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#launching_rossimulation">Launching ROS/Simulation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#launching_gazebo_with_ros_wrappers">Launching Gazebo with ROS Wrappers</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gazebo_simulator">Gazebo Simulator</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#jmavsim_simulator">jMAVSim Simulator</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#control_output">Control &amp; Output</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gcs">GCS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#output">Output</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../04-dev-px4/">Development PX4</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../05-pilot-license/">Pilot License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Flight DIY</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Simulation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="simulation">Simulation<a class="headerlink" href="#simulation" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="https://docs.px4.io/main/en/simulation/ros_interface.html">ROS with Gazebo Simulation</a></li>
+</ul>
+<blockquote>
+<p>Crashing simulated planes is a lot cheaper than crashing real ones!</p>
+</blockquote>
+<hr />
+<p align="center">
+  <img src="/img/pc_mavros_fcu.png" style="width:80%">
+</p>
+
+<p>仿真首先分为 <strong>软件在环仿真 (SITL)</strong> 和 <strong>硬件在环仿真 (HITL)</strong>。目前来看，软件在环仿真更简单实现及方便。</p>
+<p>软件在环仿真一共是有 <a href="https://dev.px4.io/en/simulation/jmavsim.html">jMAVSim</a>、<a href="https://dev.px4.io/en/simulation/gazebo.html">Gazebo</a>、<a href="https://dev.px4.io/en/simulation/airsim.html">AirSim</a> 这三种。jMAVSim 是一个轻量级的仿真器，目前只支持四旋翼仿真。Gazebo 支持旋翼、固定翼、倾转、小车等，是所有仿真器里支持平台最多的，也能支持多个无人机的仿真，在各个仿真器比较的表格里，PX4官方是这么说Gazebo仿真的: <strong>This simulator is highly recommended</strong>.</p>
+<p>一般而言，如果我是修改了PX4固件内的代码，比如修改了姿态控制器，我会用 <strong>jMAVSim</strong> 调试，同时打开地面站，利用 <strong>定点及自稳模式</strong> 进行飞行测试，还能下载log看看记录的量对不对。jMAVSim不吃电脑配置，运行比较流畅，适合快速验证PX4内部代码逻辑及检查修改固件后的BUG。</p>
+<p>如果我需要用到 px4_command 及 mavros包 来进行 offboard模式的测试，我会使用 <strong>Gazebo</strong> 仿真。比如我在机载电脑中修改了一些控制逻辑，打开Gazebo仿真，同时运行mavros及相应节点，将仿真的无人机切换至offboard模式，在Gazebo中测试我修改的代码是否正确，十分好用！</p>
+<p>这只是个人的使用习惯，正常来讲，后面说的那个功能用jMAVSim也能做，但你既然都跑ROS了，肯定用一个和ROS相关的仿真器更加好用一点。jMAVSim比不过Gazebo的一点是它无法进行固定翼、小车的仿真，以及无法进行视觉类的仿真，无法修改飞行环境等等。</p>
+<h2 id="installing_ros_and_gazebo">Installing ROS and Gazebo<a class="headerlink" href="#installing_ros_and_gazebo" title="Permanent link">&para;</a></h2>
+<h3 id="gazebo">Gazebo<a class="headerlink" href="#gazebo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># ~/.ignition/fuel/config.yaml</span>
+<span class="nt">servers</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">osrf</span>
+    <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://fuel.ignitionrobotics.org</span>
+</code></pre></div>
+<h3 id="mavros">MAVROS<a class="headerlink" href="#mavros" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://docs.px4.io/main/en/ros/mavros_installation.html">ROS with MAVROS Installation Guide</a></li>
+</ul>
+<p><a href="http://wiki.ros.org/mavros">MAVROS</a>: <strong>MAVLink</strong> extendable communication node for ROS with proxy for Ground Control Station.</p>
+<p align="center">
+  <img src="/img/mavros.png" style="width:80%">
+  <img src="/img/mavlink.png" style="width:80%">
+</p>
+
+<h2 id="launching_rossimulation">Launching ROS/Simulation<a class="headerlink" href="#launching_rossimulation" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>roslaunch mavros px4.launch fcu_url:<span class="o">=</span><span class="s2">&quot;udp://:14540@127.0.0.1:14557&quot;</span>
+</code></pre></div>
+<h2 id="launching_gazebo_with_ros_wrappers">Launching Gazebo with ROS Wrappers<a class="headerlink" href="#launching_gazebo_with_ros_wrappers" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/PX4/PX4-Autopilot">PX4-Autopilot</a></li>
+</ul>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+</code></pre></div>
+<h3 id="gazebo_simulator">Gazebo Simulator<a class="headerlink" href="#gazebo_simulator" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> &lt;PX4-Autopilot_clone&gt;
+
+make px4_sitl gazebo
+make px4_sitl_default gazebo
+
+<span class="c1"># or</span>
+<span class="nv">DONT_RUN</span><span class="o">=</span><span class="m">1</span> make px4_sitl_default gazebo
+<span class="nb">source</span> ~/catkin_ws/devel/setup.bash    <span class="c1"># (optional)</span>
+<span class="nb">source</span> Tools/setup_gazebo.bash <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span> <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/build/px4_sitl_default
+<span class="nb">export</span> <span class="nv">ROS_PACKAGE_PATH</span><span class="o">=</span><span class="nv">$ROS_PACKAGE_PATH</span>:<span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>
+<span class="nb">export</span> <span class="nv">ROS_PACKAGE_PATH</span><span class="o">=</span><span class="nv">$ROS_PACKAGE_PATH</span>:<span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/Tools/sitl_gazebo
+roslaunch px4 posix_sitl.launch
+</code></pre></div>
+<p>启动成功后，会看到Gazebo中有一个iris无人机。这时你可以打开QGC地面站，地面站会默认连接这台飞机，你可以尝试利用地面站发送起飞指令测试。</p>
+<h3 id="jmavsim_simulator">jMAVSim Simulator<a class="headerlink" href="#jmavsim_simulator" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> &lt;PX4-Autopilot_clone&gt;
+
+make px4_sitl jmavsim
+</code></pre></div>
+<h2 id="control_output">Control &amp; Output<a class="headerlink" href="#control_output" title="Permanent link">&para;</a></h2>
+<h3 id="gcs">GCS<a class="headerlink" href="#gcs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>./QGroundControl.AppImage
+</code></pre></div>
+<h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>rostopic <span class="nb">echo</span> /mavros/imu/data
+rostopic list
+</code></pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../04-dev-px4/" class="btn btn-neutral float-right" title="Development PX4">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../02-config-debug/" class="btn btn-neutral" title="Config & Debug"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../02-config-debug/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../04-dev-px4/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
