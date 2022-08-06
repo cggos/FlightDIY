@@ -1,4 +1,4 @@
-# Dev PX4
+# Development PX4
 
 * [https://docs.px4.io/main/zh/dev_setup/getting_started.html](https://docs.px4.io/main/zh/dev_setup/getting_started.html)
 

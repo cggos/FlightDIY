@@ -65,15 +65,15 @@
 第一次去公园试飞，由于没控制好，摔下来摔断了一根腿
 
 <p align="center">
-  <img src="/img/hw/IMG_1326-min.png" style="width:80%">
+  <img src="../img/hw/IMG_1326-min.png" style="width:80%">
 </p>
 
 <p align="center">
-  <img src="/img/hw/IMG_1327-min.png" style="width:80%">
+  <img src="../img/hw/IMG_1327-min.png" style="width:80%">
 </p>
 
 用强力胶粘好后，在小区内成功试飞
 
 <p align="center">
-  <img src="/img/hw/IMG_1328-min.png" style="width:80%">
+  <img src="../img/hw/IMG_1328-min.png" style="width:80%">
 </p>

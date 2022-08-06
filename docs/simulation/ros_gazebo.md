@@ -7,7 +7,7 @@
 ---
 
 <p align="center">
-  <img src="/img/pc_mavros_fcu.png" style="width:80%">
+  <img src="../img/pc_mavros_fcu.png" style="width:80%">
 </p>
 
 仿真首先分为 **软件在环仿真 (SITL)** 和 **硬件在环仿真 (HITL)**。目前来看，软件在环仿真更简单实现及方便。
@@ -41,8 +41,8 @@ servers:
 [MAVROS](http://wiki.ros.org/mavros): **MAVLink** extendable communication node for ROS with proxy for Ground Control Station.
 
 <p align="center">
-  <img src="/img/mavros.png" style="width:80%">
-  <img src="/img/mavlink.png" style="width:80%">
+  <img src="../img/mavros.png" style="width:80%">
+  <img src="../img/mavlink.png" style="width:80%">
 </p>
 
 

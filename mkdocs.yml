@@ -52,9 +52,17 @@ plugins:
         
 nav:
   - Home: 'index.md'
-  - Hardware: '00-hardware.md'
-  - Software: '01-software.md'
-  - Config & Debug: '02-config-debug.md'
-  - Simulation: '03-simulation.md'
-  - Development PX4: '04-dev-px4.md'
-  - Pilot License: '05-pilot-license.md'
+
+  - Hardware & Software Config:
+    - Hardware: 'hsw_cfg/hardware.md'
+    - Software: 'hsw_cfg/software.md'
+    - Config & Debug: 'hsw_cfg/config_debug.md'
+  
+  - Simulation: 
+    - ROS with Gazebo Simulation: 'simulation/ros_gazebo.md'
+
+  - Development:
+    - Development PX4: 'development/dev_px4.md'
+
+  - Credential:
+    - Pilot License: 'credential/pilot_license.md'
