@@ -26,8 +26,7 @@
 
 ### Gazebo
 
-```yaml
-# ~/.ignition/fuel/config.yaml
+```yaml title="~/.ignition/fuel/config.yaml"
 servers:
   -
     name: osrf
@@ -41,8 +40,8 @@ servers:
 [MAVROS](http://wiki.ros.org/mavros): **MAVLink** extendable communication node for ROS with proxy for Ground Control Station.
 
 <p align="center">
-  <img src="../img/mavros.png" style="width:80%">
-  <img src="../img/mavlink.png" style="width:80%">
+  <img src="../img/mavros.png" style="width:90%">
+  <img src="../img/mavlink.png" style="width:90%">
 </p>
 
 
