@@ -1,5 +1,7 @@
 # Flight DIY
 
+Source Code: https://github.com/cggos/FlightDIY
+
 ---
 
 <p align="center">

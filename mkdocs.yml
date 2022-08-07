@@ -66,3 +66,6 @@ nav:
 
   - Credential:
     - Pilot License: 'credential/pilot_license.md'
+  
+  - Course:
+    - Shenlan: 'course/shenlan.md'
