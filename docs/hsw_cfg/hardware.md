@@ -26,18 +26,22 @@
 
 ### 动力
 
-* 郎宇 A2212 电机
+* 郎宇 A2212 电机：无刷电机
 
 * 电调
 
-* 桨叶
+* 桨叶：10寸浆（25厘米左右）
 
 
 ### 飞控
 
-* Pixhawk 4
+- Pixhawk 4
 
-* 减震板
+- 减震板
+
+#### Pixhawk 4
+
+
 
 
 ### 传感器
@@ -52,11 +56,26 @@
 
 #### 遥控器 和 接收机
 
-* 乐迪 AT9S 遥控器
+https://www.radiolink.com/at9spro_manual
+
+* 乐迪 AT9S Pro 遥控器
 
 * 接收机: R9DS
 
+##### 电池安装
+
+遥控器电池安装方式为：打开遥控器后侧下方电池槽（向下推即可），将电池供电头（红色接口，有红黑两条电线对应正极和负极）插在遥控器的电池槽左侧二口排插上，保证正极（红色电线）朝上。
+
+注：不要使用 USB端口作为充电端口，否则会损坏发射机，端口用于升级固件和将数据复制到计算机。它不能在计算机上用作控制器。
+
+<p align="center">
+  <img src="../img/hw/AT9S-Pro-Bat.png" style="width:80%">
+</p>
+
+
 #### 数传电台
+
+https://docs.px4.io/main/en/telemetry/
 
 * XROCK 无线数传电台模块
 * V4具有可互换功能，可作为地面端，又可作为机载端使用
@@ -70,6 +89,12 @@
   <img src="../img/digital_radio_params.png" style="width:43%">
   <img src="../img/digital_radio_app.png" style="width:50%">
 </p>
+
+软件配置：
+
+- MP
+- QGC
+- 3DRRadio Config
 
 
 ## 硬件组装

@@ -1,18 +1,41 @@
 # Development PX4
 
-* [https://docs.px4.io/main/zh/dev_setup/getting_started.html](https://docs.px4.io/main/zh/dev_setup/getting_started.html)
+- https://px4.io/
+* https://docs.px4.io/main/zh/dev_setup/getting_started.html
+* https://px4.io/software/getting-started/hello-sky/ubuntu/
 
 ---
 
-## Download
+## Flight Review
+
+- [Flight Review](https://logs.px4.io/)
+
+
+## Download & Install
+
+download
 
 ```bash
 git clone https://github.com/PX4/PX4-Autopilot.git --recursive
 ```
 
+install
+
+```bash
+bash Tools/setup/ubuntu.sh
+```
+
+list
+
+```bash
+make list_config_targets
+```
+
 ## First Build (Using the jMAVSim Simulator)
 
 ```bash
+make distclean
+
 make px4_sitl jmavsim
 ```
 
@@ -57,7 +80,7 @@ Rebooting. Elapsed Time 26.817
 
 ## MAVROS Offboard control example
 
-- [MAVROS Offboard control example](https://docs.px4.io/v1.12/en/ros/mavros_offboard.html)
+- [MAVROS Offboard control example (C++)](https://docs.px4.io/main/en/ros/mavros_offboard_cpp.html)
 
 ```bash
 rosrun px4_sim offb_node
@@ -65,8 +88,18 @@ rosrun px4_sim offb_node
 
 ## NSH控制台
 
+> 拔掉SD卡（脚本中提到的没有SD卡进入nsh，有SD时进入MAVLINK，因此会出现一段乱码）
+
 ```bash
-./Tools/mavlink_shell.py
+./Tools/mavlink_shell.py /dev/ttyACM0
+
+# or: PX4 Toolchain->TeraTerm (Windows)
+
+# or
+screen /dev/ttyAVM0 57600 8N1
+
+# or 
+sudo minicom
 ```
 
 output
