@@ -531,8 +531,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#Download" class="md-nav__link">
-    Download
+  <a href="#Flight_Review" class="md-nav__link">
+    Flight Review
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Download__Install" class="md-nav__link">
+    Download &amp; Install
   </a>
   
 </li>
@@ -711,8 +718,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#Download" class="md-nav__link">
-    Download
+  <a href="#Flight_Review" class="md-nav__link">
+    Flight Review
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Download__Install" class="md-nav__link">
+    Download &amp; Install
   </a>
   
 </li>
@@ -768,69 +782,95 @@
 
 <h1 id="Development_PX4">Development PX4<a class="headerlink" href="#Development_PX4" title="Permanent link">&para;</a></h1>
 <ul>
+<li><a href="https://px4.io/">https://px4.io/</a></li>
 <li><a href="https://docs.px4.io/main/zh/dev_setup/getting_started.html">https://docs.px4.io/main/zh/dev_setup/getting_started.html</a></li>
+<li><a href="https://px4.io/software/getting-started/hello-sky/ubuntu/">https://px4.io/software/getting-started/hello-sky/ubuntu/</a></li>
 </ul>
 <hr />
-<h2 id="Download">Download<a class="headerlink" href="#Download" title="Permanent link">&para;</a></h2>
+<h2 id="Flight_Review">Flight Review<a class="headerlink" href="#Flight_Review" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://logs.px4.io/">Flight Review</a></li>
+</ul>
+<h2 id="Download__Install">Download &amp; Install<a class="headerlink" href="#Download__Install" title="Permanent link">&para;</a></h2>
+<p>download</p>
 <div class="highlight"><span class="filename">Bash</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git clone https://github.com/PX4/PX4-Autopilot.git --recursive
 </code></pre></div>
+<p>install</p>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bash Tools/setup/ubuntu.sh
+</code></pre></div>
+<p>list</p>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>make list_config_targets
+</code></pre></div>
 <h2 id="First_Build_Using_the_jMAVSim_Simulator">First Build (Using the jMAVSim Simulator)<a class="headerlink" href="#First_Build_Using_the_jMAVSim_Simulator" title="Permanent link">&para;</a></h2>
-<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>make px4_sitl jmavsim
-</code></pre></div>
-<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pxh&gt; commander takeoff
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>pxh&gt; commander land
-</code></pre></div>
-<h2 id="First_Application_Tutorial_Hello_Sky">First Application Tutorial (Hello Sky)<a class="headerlink" href="#First_Application_Tutorial_Hello_Sky" title="Permanent link">&para;</a></h2>
 <div class="highlight"><span class="filename">Bash</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>make distclean
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>make px4_fmu-v5_default <span class="o">[</span>upload<span class="o">]</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>make px4_sitl jmavsim
+</code></pre></div>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pxh&gt; commander takeoff
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>pxh&gt; commander land
+</code></pre></div>
+<h2 id="First_Application_Tutorial_Hello_Sky">First Application Tutorial (Hello Sky)<a class="headerlink" href="#First_Application_Tutorial_Hello_Sky" title="Permanent link">&para;</a></h2>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>make distclean
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>make px4_fmu-v5_default <span class="o">[</span>upload<span class="o">]</span>
 </code></pre></div>
 <p>output</p>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[0/13] Performing build step for &#39;px4io_firmware&#39;
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ninja: no work to do.
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>[1/2] uploading px4
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Loaded firmware for board id: 50,0 size: 1892041 bytes (91.65%), waiting for the bootloader...
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>Attempting reboot on /dev/serial/by-id/usb-ArduPilot_Pixhawk4_2A003D000550304E35313320-if02 with baudrate=57600...
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>If the board does not respond, unplug and re-plug the USB connector.
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>Found board id: 50,0 bootloader version: 5 on /dev/serial/by-id/usb-3D_Robotics_PX4_BL_FMU_v5.x_0-if00
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>sn: 003d002a4e30500520333135
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>chip: 10016451
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>family: b&#39;STM32F7[6|7]x&#39;
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>revision: b&#39;Z&#39;
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>flash: 2064384 bytes
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>Windowed mode: False
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>Erase  : [====================] 100.0%
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>Program: [====================] 100.0%
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>Verify : [====================] 100.0%
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>Rebooting. Elapsed Time 26.817
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>[0/13] Performing build step for &#39;px4io_firmware&#39;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>ninja: no work to do.
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>[1/2] uploading px4
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Loaded firmware for board id: 50,0 size: 1892041 bytes (91.65%), waiting for the bootloader...
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>Attempting reboot on /dev/serial/by-id/usb-ArduPilot_Pixhawk4_2A003D000550304E35313320-if02 with baudrate=57600...
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>If the board does not respond, unplug and re-plug the USB connector.
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>Found board id: 50,0 bootloader version: 5 on /dev/serial/by-id/usb-3D_Robotics_PX4_BL_FMU_v5.x_0-if00
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>sn: 003d002a4e30500520333135
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>chip: 10016451
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>family: b&#39;STM32F7[6|7]x&#39;
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>revision: b&#39;Z&#39;
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>flash: 2064384 bytes
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>Windowed mode: False
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>Erase  : [====================] 100.0%
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>Program: [====================] 100.0%
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>Verify : [====================] 100.0%
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>Rebooting. Elapsed Time 26.817
 </code></pre></div>
 <h2 id="MAVROS_Offboard_control_example">MAVROS Offboard control example<a class="headerlink" href="#MAVROS_Offboard_control_example" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://docs.px4.io/v1.12/en/ros/mavros_offboard.html">MAVROS Offboard control example</a></li>
+<li><a href="https://docs.px4.io/main/en/ros/mavros_offboard_cpp.html">MAVROS Offboard control example (C++)</a></li>
 </ul>
-<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>rosrun px4_sim offb_node
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>rosrun px4_sim offb_node
 </code></pre></div>
 <h2 id="NSH控制台">NSH控制台<a class="headerlink" href="#NSH控制台" title="Permanent link">&para;</a></h2>
-<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./Tools/mavlink_shell.py
+<blockquote>
+<p>拔掉SD卡（脚本中提到的没有SD卡进入nsh，有SD时进入MAVLINK，因此会出现一段乱码）</p>
+</blockquote>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./Tools/mavlink_shell.py /dev/ttyACM0
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># or: PX4 Toolchain-&gt;TeraTerm (Windows)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1"># or</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>screen /dev/ttyAVM0 <span class="m">57600</span> 8N1
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1"># or </span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>sudo minicom
 </code></pre></div>
 <p>output</p>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Using port /dev/serial/by-id/usb-3D_Robotics_PX4_FMU_v5.x_0-if00
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Connecting to MAVLINK...
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>NuttShell (NSH) NuttX-10.2.0
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>nsh&gt;
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>nsh&gt; px4_simple_app
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>INFO  [px4_simple_app] Hello Sky!
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>INFO  [px4_simple_app] Accelerometer:    -0.0865     -0.1489     -9.8105
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>INFO  [px4_simple_app] Accelerometer:    -0.0839     -0.1436     -9.8115
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>INFO  [px4_simple_app] Accelerometer:    -0.0911     -0.1582     -9.8103
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>INFO  [px4_simple_app] Accelerometer:    -0.1014     -0.1553     -9.8027
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>INFO  [px4_simple_app] Accelerometer:    -0.0836     -0.1614     -9.8154
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>INFO  [px4_simple_app] exiting
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Using port /dev/serial/by-id/usb-3D_Robotics_PX4_FMU_v5.x_0-if00
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Connecting to MAVLINK...
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>NuttShell (NSH) NuttX-10.2.0
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>nsh&gt;
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>nsh&gt; px4_simple_app
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>INFO  [px4_simple_app] Hello Sky!
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>INFO  [px4_simple_app] Accelerometer:    -0.0865     -0.1489     -9.8105
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>INFO  [px4_simple_app] Accelerometer:    -0.0839     -0.1436     -9.8115
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>INFO  [px4_simple_app] Accelerometer:    -0.0911     -0.1582     -9.8103
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>INFO  [px4_simple_app] Accelerometer:    -0.1014     -0.1553     -9.8027
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>INFO  [px4_simple_app] Accelerometer:    -0.0836     -0.1614     -9.8154
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>INFO  [px4_simple_app] exiting
 </code></pre></div>
 
               
