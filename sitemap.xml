@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mav.cgabc.xyz/</loc>
-         <lastmod>2024-10-03</lastmod>
+         <lastmod>2024-10-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mav.cgabc.xyz/course/shenlan/</loc>
-         <lastmod>2024-10-03</lastmod>
+         <lastmod>2024-10-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mav.cgabc.xyz/credential/pilot_license/</loc>
-         <lastmod>2024-10-03</lastmod>
+         <lastmod>2024-10-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mav.cgabc.xyz/development/dev_px4/</loc>
-         <lastmod>2024-10-03</lastmod>
+         <lastmod>2024-10-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mav.cgabc.xyz/development/ros_gazebo/</loc>
+         <lastmod>2024-10-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mav.cgabc.xyz/hsw_cfg/config_debug/</loc>
-         <lastmod>2024-10-03</lastmod>
+         <lastmod>2024-10-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mav.cgabc.xyz/hsw_cfg/hardware/</loc>
-         <lastmod>2024-10-03</lastmod>
+         <lastmod>2024-10-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mav.cgabc.xyz/hsw_cfg/software/</loc>
-         <lastmod>2024-10-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mav.cgabc.xyz/simulation/ros_gazebo/</loc>
-         <lastmod>2024-10-03</lastmod>
+         <lastmod>2024-10-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
