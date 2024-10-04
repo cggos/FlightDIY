@@ -2,6 +2,18 @@
 
 ---
 
+## Overview
+
+硬件
+
+- Pixhawk: https://pixhawk.org/
+- APM
+
+固件
+
+- PX4
+- ArduPilot: https://ardupilot.org/
+
 <p align="center">
   <img src="../img/DIY-PX4.png" style="width:90%">
 </p>
@@ -103,7 +115,7 @@ https://docs.px4.io/main/en/telemetry/
   <img src="../img/hw/IMG_1315-min.png" style="width:80%">
 </p>
 
-焊接 底板和电调
+### 焊接 底板和电调
 
 <p align="center">
   <img src="../img/hw/IMG_1316-min.png" style="width:80%">
@@ -115,25 +127,25 @@ https://docs.px4.io/main/en/telemetry/
   <img src="../img/hw/IMG_1318-min.png" style="width:80%">
 </p>
 
-安装4个电机
+### 安装4个电机
 
 <p align="center">
   <img src="../img/hw/IMG_1319-min.png" style="width:80%">
 </p>
 
-电机与电调接线 (注意顺序)，安装 机臂
+### 电机与电调接线 (注意顺序)，安装 机臂
 
 <p align="center">
   <img src="../img/hw/IMG_1320-min.png" style="width:80%">
 </p>
 
-焊接 分电板和底板，并安装 (此步骤应该在安装机臂前)
+### 焊接 分电板和底板，并安装 (此步骤应该在安装机臂前)
 
 <p align="center">
   <img src="../img/hw/IMG_1321-min.png" style="width:80%">
 </p>
 
-安装 减震板、飞控、GPS、脚架
+### 安装 减震板、飞控、GPS、脚架
 
 <p align="center">
   <img src="../img/hw/IMG_1322-min.png" style="width:80%">
@@ -142,3 +154,10 @@ https://docs.px4.io/main/en/telemetry/
 <p align="center">
   <img src="../img/hw/IMG_1323-min.png" style="width:80%">
 </p>
+
+### 与树莓派连接
+
+<p align="center">
+  <img src="../img/hw/PX4-RPi-00.jpeg" style="width:80%">
+</p>
+

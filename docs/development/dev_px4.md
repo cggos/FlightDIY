@@ -1,10 +1,15 @@
 # Development PX4
 
 - https://px4.io/
-* https://docs.px4.io/main/zh/dev_setup/getting_started.html
-* https://px4.io/software/getting-started/hello-sky/ubuntu/
+- https://docs.px4.io/main/
+- https://dronecode.org/
 
 ---
+
+## Overview
+
+* https://px4.io/software/getting-started/hello-sky/ubuntu/
+
 
 ## Flight Review
 

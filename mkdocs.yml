@@ -91,15 +91,13 @@ extra:
 nav:
   - Home: 'index.md'
 
-  - Hardware & Software Config:
+  - Hardware & Software:
     - Hardware: 'hsw_cfg/hardware.md'
     - Software: 'hsw_cfg/software.md'
     - Config & Debug: 'hsw_cfg/config_debug.md'
   
-  - Simulation: 
-    - ROS with Gazebo Simulation: 'simulation/ros_gazebo.md'
-
   - Development:
+    - ROS with Gazebo Simulation: 'development/ros_gazebo.md'
     - Development PX4: 'development/dev_px4.md'
 
   - Credential:
